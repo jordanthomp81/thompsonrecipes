@@ -83,5 +83,6 @@ body {
 
 .navigation_auth_username {
 	color: #dbe3ed;
-	
+	font-size: 15px;
+	margin-top: 20px;
 }
