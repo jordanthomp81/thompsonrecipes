@@ -1,7 +1,40 @@
-<div class="navigation-wrapper">
+<div class="navigation-wrapper row fullWidth">
 
-	<ul>
-		<li><a href="/login">Login</a></li>
-	</ul>
+	<div class="navigation-grid-left large-2 medium-2 small-2 columns"></div>
+
+	<div class="large-8 medium-8 small-8 columns">
+
+		<div class="large-4 medium-4 small-4 columns">
+
+			<a href="/"><img class="logo" src="../assets/img/logo.png" height="55px" width="auto" /></a>
+
+		</div>
+
+		<div class="large-4 medium-4 small-4 columns">
+
+
+		</div>
+
+		<div class="navigation-icon-container large-4 medium-4 small-4 columns clearfix">
+
+			<a href="/settings"><div data-options="is_hover:true; hover_timeout:5000" data-options="align:left" data-dropdown="drop" class="navigation-settings-icon fa fa-cog right"></div></a>
+			<ul id="drop" class="medium f-dropdown" data-dropdown-content>
+			  <li><a href="/logout">Logout</a></li>
+			</ul>
+
+			<a href="/messages"><div class="navigation-messages-icon fa fa-comment right"></div></a>
+
+			<a href="/friends"><div class="navigation-friends-icon fa fa-user right"></div></a>
+
+		</div>
+
+	</div>
+
+	<div class="large-2 medium-2 small-2 columns"></div>
+
+	<script>
+        $(document).foundation();
+    </script>
 
 </div>
+
