@@ -84,5 +84,17 @@ body {
 .navigation_auth_username {
 	color: #dbe3ed;
 	font-size: 15px;
-	margin-top: 20px;
+	margin-top: 22px;
+	margin-right: 20px;
+}
+
+.navigation_login {
+	color: #dbe3ed;
+	font-size: 15px;
+	margin-top: 22px;
+	margin-right: 20px;
+}
+
+.navigation_login a {
+	color: white;
 }

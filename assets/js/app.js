@@ -1,20 +1,26 @@
 var app = angular.module('fakeFacebook', ['ngRoute', 'firebase']);
 
-  app.controller('LogoutController', function() {
+  app.controller('LogoutController', [ '$scope', '$rootScope', '$location', function($scope, $rootScope, $location) {
+      var fb = new Firebase('https://fakefacebook.firebaseio.com/');
 
-  });
-
-  app.controller('LogoutController', function() {
-
-  });
-
-
+      fb.unauth(function(){
+        $rootScope.auth = null;
+        $rootScope.user = null;
+        console.log($rootScope.auth);
+        $location.path("/login")
+        $scope.$apply();
+      });
+  }]);
 
 	app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 
       $routeProvider
 
           .when('/', {
+              templateUrl : '/views/newsfeed.html',
+              controller : 'AuthCtrl',
+              controllerAs: 'auth'
+          }).when('/login', {
               templateUrl : '/views/login.html',
               controller : 'AuthCtrl',
               controllerAs: 'auth'
@@ -22,17 +28,11 @@ var app = angular.module('fakeFacebook', ['ngRoute', 'firebase']);
               templateUrl : '/views/logout.html',
               controller : 'LogoutController'
           }).when('/settings', {
-              templateUrl : '/views/settings.html',
-              controller : 'LogoutController'
+              templateUrl : '/views/settings.html'
           }).when('/messages', {
-              templateUrl : '/views/messages.html',
-              controller : 'LogoutController'
+              templateUrl : '/views/messages.html'
           }).when('/friends', {
-              templateUrl : '/views/friends.html',
-              controller : 'LogoutController'
-          }).when('/newsfeed', {
-              templateUrl : '/views/newsfeed.html',
-              controller : 'NewsfeedController'
+              templateUrl : '/views/friends.html'
           });
 
       $locationProvider.html5Mode(true);
@@ -41,6 +41,7 @@ var app = angular.module('fakeFacebook', ['ngRoute', 'firebase']);
 app.controller('AuthCtrl', [
   '$scope', '$rootScope', '$firebaseAuth', '$location', function($scope, $rootScope, $firebaseAuth, $location) {
     var ref = new Firebase('https://fakefacebook.firebaseio.com/');
+    $rootScope.firebaseObj = ref;
     $rootScope.auth = $firebaseAuth(ref);
         
     $scope.signIn = function () {
@@ -53,7 +54,6 @@ app.controller('AuthCtrl', [
       } else {
           console.log("Authenticated successfully with payload:", authData);
           $rootScope.user = authData;
-          debugger;
 
           $rootScope.$apply(function() {
             $location.path('/newsfeed');
