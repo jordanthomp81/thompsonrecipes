@@ -30,13 +30,16 @@ var app = angular.module('fakeFacebook', ['ngRoute', 'firebase']);
           }).when('/friends', {
               templateUrl : '/views/friends.html',
               controller : 'LogoutController'
+          }).when('/newsfeed', {
+              templateUrl : '/views/newsfeed.html',
+              controller : 'NewsfeedController'
           });
 
       $locationProvider.html5Mode(true);
   }]);
 
 app.controller('AuthCtrl', [
-  '$scope', '$rootScope', '$firebaseAuth', function($scope, $rootScope, $firebaseAuth) {
+  '$scope', '$rootScope', '$firebaseAuth', '$location', function($scope, $rootScope, $firebaseAuth, $location) {
     var ref = new Firebase('https://fakefacebook.firebaseio.com/');
     $rootScope.auth = $firebaseAuth(ref);
         
@@ -49,8 +52,12 @@ app.controller('AuthCtrl', [
           console.log("Login Failed!", error);
       } else {
           console.log("Authenticated successfully with payload:", authData);
-          console.log(authData.password.email);
-          $scope.welcome = "Welcome! " + authData.password.email;
+          $rootScope.user = authData;
+          debugger;
+
+          $rootScope.$apply(function() {
+            $location.path('/newsfeed');
+          });
       }
 ;      });
     }
@@ -73,3 +80,7 @@ app.controller('AlertCtrl', [
     $rootScope.alert = {};
   }
 ]);
+
+app.controller('NewsfeedController', [ '$rootScope', function($rootScope) {
+  
+}]);

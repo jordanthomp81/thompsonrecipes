@@ -30,7 +30,11 @@
 
 	</div>
 
-	<div class="large-2 medium-2 small-2 columns"></div>
+	<div ng-show="user" class="large-2 medium-2 small-2 columns clearfix">
+		
+		<h5 class="navigation_auth_username">{{user.password.email}}</h5>
+
+	</div>
 
 	<script>
         $(document).foundation();
