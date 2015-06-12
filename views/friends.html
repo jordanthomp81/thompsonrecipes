@@ -1,19 +1,17 @@
 <h1>Friends</h1>
-
-<div ng-repeat="name in names">
-            
-	<h2>{{ name }}</h2>
-
+<div ng-repeat="user in users">
+	{{user.users.friends}}
 </div>
 
+
 <div class="main">
-<div class="projbox">
+<div class="projbox" ng-repeat="user in users">
  <div class="photo"></div>
    <img src="http://pre04.deviantart.net/2b8b/th/pre/f/2013/269/0/0/a_happy_smiling_face_by_vigorousjammer-d6o2ot5.png" alt="Smiley Face" class="friendsPhoto">
  <div class="description">
-     <h2>Name: {{name}} </h2>
+     <h2>Name: {{user.profile.first_name + " " + user.profile.last_name}} </h2>
      <h2>Description:</h2>
-     <p> {{description}} </p>
+     <p>jkskjngslngkwgk</p>
      <input type="button" id="addFriendBtn" value="Add Friend"/>
  </div>
 </div>

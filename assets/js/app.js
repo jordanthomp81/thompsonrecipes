@@ -36,6 +36,8 @@ var app = angular.module('fakeFacebook', ['ngRoute', 'firebase']);
               controller: 'FriendsController'
           }).when('/newsfeed', {
               templateUrl : '/views/newsfeed.html'
+          }).when('/register', {
+              templateUrl : '/views/register.html'
           });
 
       $locationProvider.html5Mode(true);
