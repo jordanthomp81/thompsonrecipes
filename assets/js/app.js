@@ -32,15 +32,23 @@ var app = angular.module('fakeFacebook', ['ngRoute', 'firebase']);
           }).when('/messages', {
               templateUrl : '/views/messages.html'
           }).when('/friends', {
-              templateUrl : '/views/friends.html'
+              templateUrl : '/views/friends.html',
+              controller: 'FriendsController'
+          }).when('/newsfeed', {
+              templateUrl : '/views/newsfeed.html'
           });
 
       $locationProvider.html5Mode(true);
   }]);
 
 app.controller('AuthCtrl', [
-  '$scope', '$rootScope', '$firebaseAuth', '$location', function($scope, $rootScope, $firebaseAuth, $location) {
+  '$scope', '$rootScope', '$firebaseAuth', '$location', '$http', function($scope, $rootScope, $firebaseAuth, $location, $http) {
     var ref = new Firebase('https://fakefacebook.firebaseio.com/');
+
+    $http.get('https://fakefacebook.firebaseio.com/').success(function(data){
+      console.log(data);
+    });
+
     $rootScope.firebaseObj = ref;
     $rootScope.auth = $firebaseAuth(ref);
         
