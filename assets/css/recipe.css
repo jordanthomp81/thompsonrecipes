@@ -8,8 +8,8 @@
 }
 
 .app-navigation-container {
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 	background-color: #192938;
 }
 
@@ -21,11 +21,6 @@
 	float: right;
 }
 
-.search-bar-container {
-	margin-top: 23px;
-	margin-left: -14px;
-}
-
 input.search-bar {
 	border-radius: 15px;
 	font-family: 'Cabin-Regular';
@@ -33,7 +28,46 @@ input.search-bar {
 	font-size: 14px;
 	padding-left: 15px;
 	color: #6d6d6d;
-	width: 85%;
+	width: 90%;
 	margin-left: 30px;
 	margin-top: 24px;
+}
+
+.log-out-btn {
+	text-align: center;
+	border: 1px solid #f3f4f4;
+	height: auto;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 20px;
+}
+
+.log-out-btn > h4 {
+	margin: 0;
+	font-family: 'Cabin-Regular';
+	font-size: 14px;
+	color: #f3f4f4;
+	letter-spacing: 2px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.add-new-btn {
+	text-align: center;
+	border: 1px solid #f3f4f4;
+	height: auto;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 20px;
+	margin-right: 20px;
+}
+
+.add-new-btn > h4 {
+	margin: 0;
+	font-family: 'Cabin-Regular';
+	font-size: 14px;
+	color: #f3f4f4;
+	letter-spacing: 2px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
