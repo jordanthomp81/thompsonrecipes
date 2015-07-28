@@ -1,42 +1,38 @@
-<!DOCTYPE html>
-<html ng-app="fakeFacebook">
+<html ng-app="thompsonrecipes">
+
 	<head>
-		<title>Simple app</title>
-
 		<base href="/">
-
-		<link rel="stylesheet" href="assets/css/foundation.css">
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-		<!-- This is how you would link your custom stylesheet -->
-		<link rel="stylesheet" href="assets/css/main.css">
-		<link rel="stylesheet" href="assets/css/friends.css">
-
-		<script src="assets/js/vendor/modernizr.js"></script>
-		<script src="assets/js/vendor/jquery.js"></script>
-		<script src="assets/js/foundation/foundation.js"></script>
-		<script src="assets/js/foundation/foundation.dropdown.js"></script>
-
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-route.min.js"></script>
-		<script src="assets/js/app.js"></script>
-		<script src="controllers/friends_controller.js"></script>
-
-		<!-- Firebase -->
-		<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
-		<!-- AngularFire -->
-		<script src="https://cdn.firebase.com/libs/angularfire/1.1.1/angularfire.min.js"></script>
-		
+		<link rel="stylesheet" href="/assets/css/foundation.css" />
+		<link rel="/assets/css/hover-min.css" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<link rel="stylesheet" href="/assets/css/recipe.css" />
+    	<script src="/assets/js/vendor/modernizr.js"></script>
 	</head>
+
 	<body>
 
-	<div ng-include src="'/views/navigation.html'"></div>
+		<ng-view></ng-view>
 
-	<div class="content-view-side-left large-2 medium-2 small-2 columns"></div>
-	<div class="content-view-side-center large-8 medium-8 small-8 columns">
-		<ng-view></ng-view></div>
-	<div class="content-view-side-right large-2 medium-2 small-2 columns"></div>
+		<!-- Angular JS Dependencies -->
+		<script src="/assets/js/angular.min.js"></script>
+		<script src="/assets/js/angular-route.min.js"></script>
 
-	
+		<!-- JS Dependencies for This Project -->
+		<script src="/app/app.module.js"></script>
+		<script src="/app/app.routes.js"></script> 
+
+		<!-- Firebase JS Dependencies -->
+		<script src="/assets/js/firebase.js"></script>
+
+		<!-- Foundation JS Dependencies -->
+		<script src="/assets/js/vendor/jquery.js"></script>
+	    <script src="/assets/js/foundation.min.js"></script>
+	    <script>
+	      $(document).foundation();
+	    </script>
+
+	    <!-- Jquery JS Dependencies -->
+		<script src="assets/js/sidebar-resize.js"></script>
 
 	</body>
 </html>

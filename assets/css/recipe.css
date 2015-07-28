@@ -1,0 +1,39 @@
+.columns {
+	margin: 0;
+	padding: 0;
+}
+
+.green {
+	background-color: green;
+}
+
+.app-navigation-container {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #192938;
+}
+
+.iconic_logo {
+	margin-top: 0px;
+	width: auto;
+	min-width: 80px;
+	height: 80px;
+	float: right;
+}
+
+.search-bar-container {
+	margin-top: 23px;
+	margin-left: -14px;
+}
+
+input.search-bar {
+	border-radius: 15px;
+	font-family: 'Cabin-Regular';
+	background-color: #ededed;
+	font-size: 14px;
+	padding-left: 15px;
+	color: #6d6d6d;
+	width: 85%;
+	margin-left: 30px;
+	margin-top: 24px;
+}
