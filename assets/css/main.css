@@ -50,12 +50,16 @@ body {
 	overflow: hidden;
 }
 
-.logo-container {
-	margin-top: 65px;
+.first-row {
+	padding-top: 45px;
 }
 
-.first-row(1) {
-	padding-top: 35px;
+.login-btn-container.large-2.medium-2.show-for-medium-up.right.columns {
+  margin-top: 25px;
+}
+
+.logo-container {
+	margin-top: 65px;
 }
 
 .login-btn-container {
