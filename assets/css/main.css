@@ -113,10 +113,12 @@ body {
 
 .top-text-container > .headline-text-medium {
 	padding-top: 150px;
+	color: white;
 }
 
 .top-text-container > .headline-text-small {
 	padding-top: 100px;
+	color: white;
 }
 
 .top-text-container > .columns {
