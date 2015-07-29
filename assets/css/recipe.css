@@ -1,3 +1,7 @@
+body {
+	background-color: #e5e5e4;
+}
+
 .columns {
 	margin: 0;
 	padding: 0;
@@ -5,6 +9,12 @@
 
 .green {
 	background-color: green;
+	height: 500px;
+}
+
+.blue {
+	background-color: blue;
+	height: 500px;
 }
 
 .app-navigation-container {
@@ -43,6 +53,26 @@ input.search-bar {
 	margin-top: 20px;
 }
 
+.log-out-btn:hover {
+	text-align: center;
+	border: none;
+	height: auto;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 20px;
+	background-color: #10b1d1;
+}
+
+.log-out-btn > h4:hover {
+	margin: 0;
+	font-family: 'Cabin-Regular';
+	font-size: 14px;
+	color: white;
+	letter-spacing: 2px;
+	padding-top: 11px;
+	padding-bottom: 11px;
+}
+
 .log-out-btn > h4 {
 	margin: 0;
 	font-family: 'Cabin-Regular';
@@ -72,3 +102,75 @@ input.search-bar {
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
+
+.add-new-btn:hover {
+	text-align: center;
+	border: none;
+	height: auto;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 20px;
+	background-color: #10b1d1;
+}
+
+.add-new-btn > h4:hover {
+	margin: 0;
+	font-family: 'Cabin-Regular';
+	font-size: 14px;
+	color: white;
+	letter-spacing: 2px;
+	padding-top: 11px;
+	padding-bottom: 11px;
+}
+
+.under-navigation-images {
+	text-align: center;
+	height: auto;
+	cursor: pointer;
+}
+
+.under-navigation-images > h4 {
+	font-family: 'Cabin-Bold';
+	font-size: 24px;
+	color: white;
+	letter-spacing: 2px;
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+.under-navigation-images:nth-of-type(1) {
+	background-image: url(../img/maindish.png);
+  	background-position: center center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	white-space: nowrap;
+	overflow: hidden;
+}
+
+.under-navigation-images:nth-of-type(2) {
+	background-image: url(../img/salad.png);
+  	background-position: center center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	white-space: nowrap;
+	overflow: hidden;
+}
+
+.under-navigation-images:nth-of-type(3) {
+	background-image: url(../img/soup.png);
+  	background-position: center center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	white-space: nowrap;
+	overflow: hidden;
+}
+
+.under-navigation-images:nth-of-type(4) {
+	background-image: url(../img/pie.png);
+  	background-position: center center;
+  	background-repeat: no-repeat;
+  	background-size: 100% 100%;
+  	white-space: nowrap;
+	overflow: hidden;
+}
+
