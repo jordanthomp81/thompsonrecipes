@@ -21,6 +21,10 @@ angular.module('thompsonrecipes')
               templateUrl : '/app/components/recipes/recipes.html',
               controller : 'recipeController',
               controllerAs: 'recipe'
+          }).when('/home', {
+              templateUrl : '/app/components/homepage/homepage.html',
+              controller : 'homeController',
+              controllerAs: 'home'
           });
 
       $locationProvider.html5Mode(true);
