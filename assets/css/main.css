@@ -54,6 +54,10 @@ body {
 	margin-top: 65px;
 }
 
+.row:nth-of-type(1) {
+	padding-top: 35px;
+}
+
 .login-btn-container {
 	margin-top: 68px;
 }
@@ -342,14 +346,15 @@ body {
 
 .footer-container > .large-6 > .large-9 > .large-12 > .large-3 {
 	padding-top: 7px;
-	margin-left: -30px;
+	margin-left: 0px;
 }
 
-.footer-container > .large-6 > .large-9 > .large-12 > .large-3 > h3 {
+.footer-container > .large-6 > .large-9 > .large-12 > h3 {
 	font-size: 15px;
 	font-family: 'Cabin-Regular';
 	letter-spacing: 2px;
 	color: #e5e5e4;
+	padding-top: 5px;
 }
 
 .footer-container > .large-6 > .large-9 > .large-12 > h3 {
@@ -357,5 +362,5 @@ body {
 	font-family: 'Cabin-Regular';
 	letter-spacing: 2px;
 	color: #e5e5e4;
-	margin-left: -15px;
+	margin-left: 15px;
 }
