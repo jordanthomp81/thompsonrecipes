@@ -9,12 +9,10 @@ body {
 
 .green {
 	background-color: green;
-	height: 500px;
 }
 
 .blue {
 	background-color: blue;
-	height: 500px;
 }
 
 .app-navigation-container {
@@ -174,3 +172,88 @@ input.search-bar {
 	overflow: hidden;
 }
 
+.bottom-content-containter {
+	margin-top: 60px;
+}
+
+.bottom-content-containter > .large-10 {
+	height: auto;
+}
+
+.little-box {
+	text-align: center;
+	height: auto;
+	width: auto;
+	margin: 0 auto;
+}
+
+.recipe-item-container {
+	background-color: #f6f7f7;
+	display: inline-block;
+	width: 250px;
+	height: 300px;
+	margin-right: 70px;
+	margin-bottom: 50px;
+	cursor: pointer;
+}
+
+.recipe-item-container:nth-child(4n) {
+	background-color: #f6f7f7;
+	display: inline-block;
+	width:250px;
+	height: 300px;
+	margin-right: 0px;
+	margin-bottom: 50px;
+}
+
+.recipe-item-container-inner {
+	text-align: center;
+	background-color: #FFF;
+	height: 255px;
+	width: 250px;
+	border-bottom: 1px solid #e5e5e4;
+}
+
+.recipe-item-image {
+	background-image: url(../img/testimage.png);
+  	background-position: center center;
+  	background-repeat: no-repeat;
+  	background-size: 100% 100%;
+  	white-space: nowrap;
+	overflow: hidden;
+	height: 168px;
+}
+
+.recipe-item-title-container {
+	height: auto;
+	
+}
+
+.recipe-item-title {
+	font-family: 'Roboto-Light';
+	color: #222222;
+	font-size: 16px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.recipe-item-timer-container {
+	margin: 0 auto;
+	height: 45px;
+	width: 70px;
+}
+
+.recipe-item-timer-title {
+	font-family: 'Roboto-Light';
+	color: #222222;
+	font-size: 13px;
+	margin-left: 8px;
+	margin-top: 13px;
+}
+
+.recipe-item-timer-icon {
+	margin-left:9px;
+	margin-top: 13px;
+	height: 16px;
+	width: 16px;
+}
