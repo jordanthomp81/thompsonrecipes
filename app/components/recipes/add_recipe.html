@@ -1,5 +1,3 @@
-{{recipe.test}}
-
 <div class="app-navigation-container row fullWidth">
 
 	<div class="large-1 columns"></div>
@@ -64,62 +62,29 @@
 
 </div>
 
-<div class="bottom-content-containter row fullWidth">
+<div class="add-recipe-form-container row fullWidth">
 
-	<div class="large-1 columns"></div>
-
-	<div class="large-10 columns">
-
-  		<div class="little-box">
-
-  			<div class="left" ng-repeat="(id, recipe) in recipes">
-
-	  			<ng-include src="'app/components/recipes/recipe_template.html'"></ng-include>
-
-  			</div>
-
-  		</div>
-	
-	</div>
-
-	<div class="large-1 columns"></div>
-
-</div>
-
-<div class="footer-container row fullWidth">
-
-	<div class="large-1 columns"></div>
+	<div class="large-3 columns"></div>
 
 	<div class="large-6 columns">
 		
-		<div class="large-1 columns"></div>
+		<h4 class="add-recipe-form-heading">Add New Recipe</h4>
 
-		<div class="large-2 columns">
-			
-			<a href="/"><img class="show-for-large-up right" src="/assets/img/footerlogo.png"></a>
+			<input type='file' onchange="angular.element(this).scope().readURL(this); angular.element(this).scope().upload(this.files[0]);"/>
 
-			<a href="/"><img class="hide-for-large-up" src="/assets/img/footerlogo.png"></a>
+			<img id="image-preview" src="#" alt="recipe_image_preview" onerror="this.src='../../assets/img/image_preview.png'" />
 
-		</div>
+			<input ng-model="recipeName" class="add-recipe-input-name" type="text" placeholder="Recipe Name"/>
 
-		<div class="large-9 columns">
-			
-			<div class="large-12 left columns">
+			<input ng-model="cookTime" class="add-recipe-input-estimated-time" type="text" placeholder="Estimated Cook Time in Hours"/>
 
-				<h3 class="left">Categories</h3>
+			<textarea  ng-model="instructions" class="add-recipe-input-instructions" placeholder="Recipe Instructions"></textarea>
 
-				<h3 class="left">Iphone App</h3>
-
-				<h3 class="left">Android App</h3>
-
-			</div>
-
-			<div class="large-12 columns"><h3>Copyright 2015 Cyanide Designs. All rights reserved.</h3></div>
-
-		</div>
+			<a href="#" ng-click="capture()" class="button success">Submit</a>
 
 	</div>
 
-	<div class="large-5 columns"></div>
+	<div class="large-3 columns"></div>
 
 </div>
+

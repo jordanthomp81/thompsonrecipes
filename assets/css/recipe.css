@@ -91,6 +91,22 @@ input.search-bar {
 	margin-right: 20px;
 }
 
+.add-new-btn > h4 > a:link {
+	color: white;
+}
+
+.add-new-btn > h4 > a:hover {
+	color: white;
+}
+
+.add-new-btn > h4 > a:visited {
+	color: white;
+}
+
+a {
+	color: white;
+}
+
 .add-new-btn > h4 {
 	margin: 0;
 	font-family: 'Cabin-Regular';
@@ -215,13 +231,9 @@ input.search-bar {
 }
 
 .recipe-item-image {
-	background-image: url(../img/testimage.png);
-  	background-position: center center;
-  	background-repeat: no-repeat;
-  	background-size: 100% 100%;
-  	white-space: nowrap;
 	overflow: hidden;
 	height: 168px;
+	width: 100%;
 }
 
 .recipe-item-title-container {
@@ -257,3 +269,61 @@ input.search-bar {
 	height: 16px;
 	width: 16px;
 }
+
+
+/* Add New Recipes Styles */
+
+.add-recipe-form-container {
+	margin-top: 50px;
+}
+
+h4.add-recipe-form-heading {
+	color: #323232;
+	font-size: 40px;
+	font-family: 'Cabin-Regular';
+	margin-bottom: 35px;
+}
+
+input.add-recipe-input-name {
+	height: 45px;
+	color: grey;
+	margin-bottom: 30px;
+}
+
+input.add-recipe-input-estimated-time {
+	height: 45px;
+	color: grey;
+	margin-bottom: 30px;
+}
+
+textarea.add-recipe-input-instructions {
+	height: 85px;
+	color: grey;
+	margin-bottom: 30px;
+}
+
+input.add-recipe-form-add-image {
+	margin-bottom: 30px;
+}
+
+::-webkit-input-placeholder {
+   color: grey;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: grey;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: grey;  
+}
+
+:-ms-input-placeholder {  
+   color: grey;  
+}
+
+#image-preview {
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
