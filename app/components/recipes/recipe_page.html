@@ -1,1 +1,132 @@
-The Recipe Page
+<div class="app-navigation-container row fullWidth">
+
+	<div class="large-1 columns"></div>
+
+	<div class="large-5 columns">
+
+		<div class="large-2 columns hide-for-small"><a href="/home"><img class="iconic_logo" src="../../assets/img/iconic_logo.png"></a></div>
+
+		<div class="small-12 text-center columns show-for-small-only"><a href="/recipes"><img src="../../assets/img/iconic_logo.png"></a></div>
+
+		<div class="search-bar-container large-7 columns end hide-for-small-only">
+			
+			<input class="search-bar" type="text" placeholder="Search dishes, desserts, etc" />
+
+		</div>
+
+		<div class="large-3 columns"></div>
+
+	</div>
+
+	<div class="large-2 columns"></div>
+
+	<div class="large-3 columns">
+
+		<div class="right log-out-btn large-3 columns end"><h4>LOG OUT</h4></div>
+
+		<div class="right add-new-btn large-3 show-for-large-up columns end"><h4><a href="/add_recipe">ADD NEW</a></h4></div>
+
+		<div class="right log-out-btn small-12 show-for-small-only columns end"><h4><a href="/add_recipe">ADD NEW</a></h4></div>
+
+	</div>
+
+	<div class="large-1 columns"></div>
+
+</div>
+
+<div class="row fullWidth">
+	
+	<div class="under-navigation-images large-3 columns show-for-large-up">
+		
+		<h4>MAIN DISHES</h4>
+
+	</div>
+
+	<div class="under-navigation-images large-3 columns show-for-large-up">
+		
+		<h4>SIDE DISHES</h4>
+
+	</div>
+
+	<div class="under-navigation-images large-3 columns show-for-large-up">
+		
+		<h4>SOUPS & STEWS</h4>
+
+	</div>
+
+	<div class="under-navigation-images large-3 columns show-for-large-up">
+		
+		<h4>DESSERTS</h4>
+
+	</div>
+
+</div>
+
+<div class="recipe-image-container row fullWidth">
+
+	<div class="large-1 columns"></div>
+
+	<div class="large-10 columns">
+
+		<img class="left recipe_image" src="{{currentRecipe.recipe_image}}">
+
+		<h4 class="left recipe-info-category">Recipes > {{currentRecipe.recipe_category}}</h4>
+
+		<h4 class="recipe-info-name">{{currentRecipe.recipe_name}}</h4>
+
+		<img src='../../assets/img/timer-icon.png' class="recipe-info-timer-icon left">
+
+		<h4 class="recipe-info-time-text">{{currentRecipe.recipe_cook_time}}</h4>
+
+		<p class="recipe-info-intructions">{{currentRecipe.recipe_intructions}}</p>
+
+	</div>
+	<div class="large-1 columns"></div>
+
+</div>
+
+<div class="site-message-container row fullWidth">
+
+	<div class="large-2 columns"></div>
+	<div class="large-8 columns"><h3>** This application is proudly built with AngularJS and Firebase, to view the site source code check us out on <a href="https://github.com/jordanthomp81/thompsonrecipes">github.com</a></h3></div>
+	<div class="large-2 columns"></div>
+
+</div>
+
+<div class="footer-container row fullWidth">
+
+	<div class="large-1 columns"></div>
+
+	<div class="large-6 columns">
+		
+		<div class="large-1 columns"></div>
+
+		<div class="large-2 columns">
+			
+			<a href="/"><img class="show-for-large-up right" src="/assets/img/footerlogo.png"></a>
+
+			<a href="/"><img class="hide-for-large-up" src="/assets/img/footerlogo.png"></a>
+
+		</div>
+
+		<div class="large-9 columns">
+			
+			<div class="large-12 left columns">
+
+				<h3 class="left">Categories</h3>
+
+				<h3 class="left">Iphone App</h3>
+
+				<h3 class="left">Android App</h3>
+
+			</div>
+
+			<div class="large-12 columns"><h3>Copyright 2015 Cyanide Designs. All rights reserved.</h3></div>
+
+		</div>
+
+	</div>
+
+	<div class="large-5 columns"></div>
+
+</div>

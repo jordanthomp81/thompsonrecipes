@@ -18,9 +18,35 @@ angular.module('thompsonrecipes', ['ngRoute'])
 		$http.get('https://thompsonrecipes.firebaseio.com/recipes.json')
 		.success(function(data) {
 			$scope.recipes = data;
-			debugger;
 		});
 
+
+		$(document).foundation();
+	}])
+
+	.controller('recipePageController', [ '$scope', '$http' , '$location', function($scope, $http, $location){
+
+		$scope.urlId = location.href.replace('http://localhost/recipe/', '');
+		
+		$http.get('https://thompsonrecipes.firebaseio.com/recipes/' + $scope.urlId + '.json')
+		.success(function(data) {
+			$scope.currentRecipe = data;
+		});
+
+		$scope.book_room_submit = function() {
+
+			var bookFirebase = new Firebase('https://roadhouse.firebaseio.com/rooms/' + $scope.urlId);
+
+			bookFirebase.update({
+				room_status: 'BOOKED',
+			  	room_checkin_date: $scope.book.room_checkin_date,
+			  	room_checkout_date: $scope.book.room_checkout_date,
+			  	room_guest_name: $scope.book.room_guest_name
+			});
+
+			$location.path('/');
+
+		}
 
 		$(document).foundation();
 	}])
@@ -41,7 +67,6 @@ angular.module('thompsonrecipes', ['ngRoute'])
 			var category = $scope.category;
 			console.log(category);
 			var imageLink = $scope.imageLink;
-			debugger;
 			// create the firebase object
 			var myFirebaseRef = new Firebase("https://thompsonrecipes.firebaseio.com/recipes");
 
@@ -50,7 +75,8 @@ angular.module('thompsonrecipes', ['ngRoute'])
 			  	recipe_name: recipeName,
 			  	recipe_cook_time: cookTime,
 			  	recipe_intructions: instructions,
-			  	recipe_image: imageLink
+			  	recipe_image: imageLink,
+			  	recipe_category: category
 			}).once('child_added', function() {
 				$location.path('/');
 			});

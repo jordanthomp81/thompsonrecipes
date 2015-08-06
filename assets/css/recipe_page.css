@@ -1,0 +1,50 @@
+.recipe_image {
+	margin-right: 40px;
+	display: block;
+	margin-bottom: 300px;
+	max-width: 600px;
+}
+
+.recipe-image-container {
+	margin-top: 80px;
+}
+
+.recipe-info-category {
+	margin-top: 15px;
+	font-family: 'Cabin-Regular';
+	font-size: 18px;
+	text-align: center;
+	border: 1px solid #10b1d1;
+	height: auto;
+	border-radius: 5px;
+	width: 200px;
+	color: #10b1d1;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	display: block;
+}
+
+.recipe-info-name {
+	font-family: 'Cabin-Regular';
+	font-size: 35px;
+	color: #222222;
+	display: block;
+	margin-top: 75px;
+	margin-bottom: 15px;
+}
+
+.recipe-info-timer-icon {
+	margin-right: 10px;
+}
+
+.recipe-info-time-text {
+	font-family: 'Cabin-Regular';
+	font-size: 15px;
+	color: #222222;
+}
+
+.recipe-info-intructions {
+	margin-top: 42px;
+	white-space: pre-line;
+	width: 80%;
+}
