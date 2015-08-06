@@ -24,7 +24,7 @@
 
 		<div class="right log-out-btn large-3 columns end"><h4>LOG OUT</h4></div>
 
-		<div class="right add-new-btn large-3 show-for-large-up columns end"><h4><a href="/add_recipe">ADD NEW</a></h4></div>
+		<a href="/add_recipe"><div class="right add-new-btn large-3 show-for-large-up columns end"><h4>ADD NEW</h4></div></a>
 
 		<div class="right log-out-btn small-12 show-for-small-only columns end"><h4><a href="/add_recipe">ADD NEW</a></h4></div>
 
@@ -75,6 +75,15 @@
 			<img id="image-preview" src="#" alt="recipe_image_preview" onerror="this.src='../../assets/img/image_preview.png'" />
 
 			<input ng-model="recipeName" class="add-recipe-input-name" type="text" placeholder="Recipe Name"/>
+
+			<select ng-model="category" class="add-recipe-input-category">
+
+	          <option value="Main Dish">Main Dish</option>
+	          <option value="Side Dish">Side Dish</option>
+	          <option value="Soups & Stews">Soups & Stews</option>
+	          <option value="Desserts" selected>Desserts</option>
+
+        	</select>
 
 			<input ng-model="cookTime" class="add-recipe-input-estimated-time" type="text" placeholder="Estimated Cook Time in Hours"/>
 

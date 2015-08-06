@@ -252,7 +252,7 @@ a {
 .recipe-item-timer-container {
 	margin: 0 auto;
 	height: 45px;
-	width: 70px;
+	width: 42px;
 }
 
 .recipe-item-timer-title {
@@ -285,6 +285,12 @@ h4.add-recipe-form-heading {
 }
 
 input.add-recipe-input-name {
+	height: 45px;
+	color: grey;
+	margin-bottom: 30px;
+}
+
+.add-recipe-input-category {
 	height: 45px;
 	color: grey;
 	margin-bottom: 30px;

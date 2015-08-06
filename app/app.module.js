@@ -38,6 +38,8 @@ angular.module('thompsonrecipes', ['ngRoute'])
 			var recipeName = $scope.recipeName;
 			var cookTime = $scope.cookTime;
 			var instructions = $scope.instructions;
+			var category = $scope.category;
+			console.log(category);
 			var imageLink = $scope.imageLink;
 			debugger;
 			// create the firebase object

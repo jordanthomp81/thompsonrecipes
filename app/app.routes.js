@@ -10,9 +10,8 @@ angular.module('thompsonrecipes')
           //    controllerAs: 'home'
           //})
           .when('/', {
-              templateUrl : '/app/components/recipes/recipes.html',
-              controller : 'recipeController',
-              controllerAs: 'recipe'
+              templateUrl : '/app/components/recipes/add_recipe.html',
+              controller : 'addRecipeController'
           }).when('/login', {
               templateUrl : '/app/components/login/login.html',
               controller : 'loginController',
