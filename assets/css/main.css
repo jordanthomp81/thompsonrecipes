@@ -63,6 +63,10 @@ body {
   margin-top: 25px;
 }
 
+.login-btn {
+	display: none;
+}
+
 .logo-container {
 	margin-top: 65px;
 }
@@ -108,7 +112,7 @@ body {
 }
 
 .top-text-container > .headline-text-large {
-	padding-top: 210px;
+	padding-top: 250px;
 }
 
 .top-text-container > .headline-text-medium {
@@ -277,6 +281,11 @@ body {
 	font-family: 'Cabin-Regular';
 	letter-spacing: 2px;
 	color: #768390;
+}
+
+.how-does-it-work-inner-text {
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 /* Start Styles for Any Device Container */

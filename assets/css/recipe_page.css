@@ -1,7 +1,7 @@
 .recipe_image {
 	margin-right: 40px;
 	display: block;
-	margin-bottom: 300px;
+	margin-bottom: 550px;
 	max-width: 600px;
 }
 
@@ -46,5 +46,4 @@
 .recipe-info-intructions {
 	margin-top: 42px;
 	white-space: pre-line;
-	width: 80%;
 }
